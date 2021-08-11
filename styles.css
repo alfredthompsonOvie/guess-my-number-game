@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+}
+body {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 16px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 350px 400px;
+    grid-template-rows: auto;
+}
+.left{
+    grid-column: 1;
+    grid-row: 1;
+    /* background-color: aqua; */
+}
+.left .scoreline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: aqua;
+}
+.right{
+    grid-column: 2;
+    grid-row: 1;
+    background-color: teal;
+    padding: 0 2em;
+    text-align: center;
+    border-radius: 0 5px 5px 0;
+}
+.right .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em 0;
+}
+.btn {
+    padding: .3em 1em;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: green;
+    border-radius: 5px;
+}
+.subHeader {
+    position: relative;
+    padding: 2rem 0;
+}
+.number {
+    background-color: aqua;
+    width: 5rem;
+    /* width: 8rem; */
+    padding: .1rem;
+    font-size: 40px;
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: .5em;
+    border-radius: 5px;
+    text-align: center;
+}
+.play {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.message, input {
+    margin-bottom: 1em;
+}
+input{
+    width: 5em;
+    padding: .5em;
+    outline: none;
+    border: 2px solid #222;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 20px;
+}
+@media (max-width: 700px){
+    .container{
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-template-rows: auto;
+    }
+    .right{
+        grid-column: 2;
+        grid-row: 1;
+        background-color: teal;
+        padding: 0 1em;
+        text-align: center;
+        border-radius: 0 5px 5px 0;
+    }
+    .subHeader {
+        position: relative;
+        padding: 1rem 0;
+    }
+}
